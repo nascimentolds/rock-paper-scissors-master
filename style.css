@@ -243,3 +243,8 @@ a:hover .img-rock {
 .rules-footer {
   grid-area: footer;
 }
+
+.close-bt {
+  border: none;
+  background: transparent;
+}
