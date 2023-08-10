@@ -244,6 +244,10 @@ a:hover .img-rock {
   grid-area: footer;
 }
 
+.rules {
+  color: var(--darkText);
+}
+
 .close-bt {
   border: none;
   background: transparent;
