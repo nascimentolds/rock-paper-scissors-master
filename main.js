@@ -4,6 +4,7 @@ const closeBt = document.querySelector('.close-bt');
 const modal = document.querySelector('.rules');
 const winBox = document.querySelector('.win');
 const winMessage = document.querySelector('.win-message');
+var score = document.querySelector('.score');
 
 rulesBt.addEventListener('click', () => {
   modal.style.display = 'flex';
@@ -32,11 +33,12 @@ options.forEach(option => {
     housePicked(housePick);
 
     var winner = win(option.id, housePick);
-    winMessageDisplay(winner);
-    console.log(winPlayer, winHouse);
+    winMessageDisplay(winner);    
+    
 
     setTimeout(() => {
       winBox.style.display = 'flex';
+      score.innerHTML = winPlayer + winHouse;
     }, 1000); 
   });
 })
