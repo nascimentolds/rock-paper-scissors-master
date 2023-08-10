@@ -54,7 +54,7 @@ body {
 
 .title {
   color: white;
-  width: 80px;
+  width: 120px;
   line-height: 14pt;
   padding: 10px;
 }
@@ -321,4 +321,28 @@ a:hover .img-rock {
 .win-bt:hover {
   background: hsl(349, 0%, 83%);
   border: 1px solid var(--scoreText);
+}
+
+.player-choose {
+  width: 130px;
+  aspect-ratio: 1;
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+/* .house-choose {
+  width: 130px;
+  aspect-ratio: 1;
+  animation-duration: 1s;
+  animation-name: slidein;
+} */
+
+@keyframes slidein {
+  from {
+    width: 50%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
