@@ -37,7 +37,7 @@
       <div class="main">
         <div class="opcoes">
           <div class="opcoes-header">
-            <a href="#" class="paper">
+            <a href="#" class="paper options" id="0">
               <div class="border border-paper">
                 <div class="button">
                   <img
@@ -48,7 +48,7 @@
                 </div>
               </div>
             </a>
-            <a href="#" class="scissors">
+            <a href="#" class="scissors options" id="1">
               <div class="border border-scissors">
                 <div class="button">
                   <img
@@ -61,7 +61,7 @@
             </a>
           </div>
           <div class="opcoes-footer">
-            <a href="#" class="rock">
+            <a href="#" class="rock options" id="2">
               <div class="border border-rock">
                 <div class="button">
                   <img
@@ -74,7 +74,28 @@
             </a>
           </div>
         </div>
+        <!-- opcoes -->
+        <div class="game">
+          <div class="opcoes-header">
+            <div class="box-choose">
+              <div class="player-choose"></div>
+              <span class="pick">YOU PICKED</span>
+            </div>
+            <div class="box-choose">
+              <div class="house-choose">
+                <div class="hide-choose"></div>
+              </div>
+              <span class="pick">THE HOUSE PICKED</span>
+            </div>
+          </div>
+          <div class="win">
+            <h1 class="win-message">YOU LOSE</h1>
+            <button type="button" class="win-bt">PLAY AGAIN</button>
+          </div>
+        </div>
+        <!-- game -->
       </div>
+      <!-- main -->
       <div class="footer">
         <button type="button" class="rules-bt">RULES</button>
       </div>
@@ -96,6 +117,7 @@
         </div>
       </div>
     </div>
+    <!-- Rules -->
 
     <script src="main.js"></script>
   </body>

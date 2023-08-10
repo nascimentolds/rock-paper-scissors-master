@@ -1,3 +1,4 @@
+// Open rules
 const rulesBt = document.querySelector('.rules-bt');
 const closeBt = document.querySelector('.close-bt');
 const modal = document.querySelector('.rules');
@@ -8,4 +9,67 @@ rulesBt.addEventListener('click', () => {
 
 closeBt.addEventListener('click', () => {
   modal.style.display = 'none';
+})
+
+// Game
+const options = document.querySelectorAll('.options');
+const opcoes = document.querySelector('.opcoes');
+const game = document.querySelector('.game');
+const paper = document.querySelector('.paper');
+
+var playerChosse = document.querySelector('.player-choose');
+var houseChosse = document.querySelector('.house-choose');
+
+options.forEach(option => {
+  option.addEventListener('click', () => {
+    game.style.display = 'block';
+    opcoes.style.display = 'none';
+
+    playerPicked(option.id);
+    var housePick = Math.floor(Math.random() * 3);
+    housePicked(housePick);
+    // setTimeout(housePicked(housePick), 3000);
+
+  });
+})
+
+// options
+
+function playerPicked(player) {
+  if (player == 0) {
+    return playerChosse.innerHTML = "<div class='border border-paper'><div class='button'><img src='./images/icon-paper.svg' alt='paper' class='img-paper' /></div></div>"
+  }
+  if (player == 1) {
+    return playerChosse.innerHTML = "<div class='border border-scissors'><div class='button'><img src='./images/icon-scissors.svg' alt='scissors' class='img-scissors' /></div></div>"
+  }
+  if (player == 2) {
+    return playerChosse.innerHTML = "<div class='border border-rock'><div class='button'><img src='./images/icon-rock.svg' alt='rock' class='img-rock' /></div></div>"
+  }
+}
+
+function housePicked(house) {
+  if (house == 0) {
+    return setTimeout(function () {
+      houseChosse.innerHTML = "<div class='border border-paper'><div class='button'><img src='./images/icon-paper.svg' alt='paper' class='img-paper' /></div></div>"
+    }, 1000);
+  }
+  if (house == 1) {
+    return setTimeout(function () {
+      houseChosse.innerHTML = "<div class='border border-scissors'><div class='button'><img src='./images/icon-scissors.svg' alt='scissors' class='img-scissors' /></div></div>"
+    }, 1000);
+  }
+  if (house == 2) {
+    return setTimeout(function () {
+      houseChosse.innerHTML = "<div class='border border-rock'><div class='button'><img src='./images/icon-rock.svg' alt='rock' class='img-rock' /></div></div>"
+    }, 1000);
+  }
+}
+
+// New game
+const winBtn = document.querySelector(".win-bt");
+
+winBtn.addEventListener('click', () => {
+  game.style.display = 'none';
+  opcoes.style.display = 'block';
+  houseChosse.innerHTML = '<div class="hide-choose"></div>';
 })

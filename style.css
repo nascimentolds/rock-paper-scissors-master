@@ -81,6 +81,7 @@ body {
 }
 
 .opcoes {
+  display: block;
   background: url("images/bg-triangle.svg") no-repeat;
   background-position: center;
   background-size: 220px;
@@ -92,7 +93,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 20px;
+  padding-inline: 30px;
   /* margin-bottom: 20px; */
   margin-top: 10px;
 }
@@ -178,11 +179,14 @@ a:hover .img-rock {
 }
 
 .footer {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  width: 100vw;
+  margin-top: 50px;
   margin-bottom: 50px;
+  bottom: 0;
 }
 
 .rules-bt {
@@ -251,4 +255,70 @@ a:hover .img-rock {
 .close-bt {
   border: none;
   background: transparent;
+}
+
+/* GAME */
+
+.game {
+  display: none;
+  margin-top: 80px;
+}
+
+.box-choose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  position: relative;
+}
+
+.pick {
+  position: absolute;
+  color: #ffffff;
+  bottom: 0;
+  width: 150px;
+  letter-spacing: 1px;
+}
+
+.hide-choose {
+  background: hsl(214, 47%, 15%);
+  border-radius: 50%;
+  width: 100px;
+  aspect-ratio: 1;
+  padding: 5px;
+}
+
+.win {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.win-message {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 40pt;
+}
+
+.win-bt {
+  background: #ffffff;
+  border: none;
+  border-radius: 6px;
+  color: var(--darkText);
+  padding: 12px;
+  width: 210px;
+  font-size: 12pt;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.win-bt:hover {
+  background: hsl(349, 0%, 83%);
+  border: 1px solid var(--scoreText);
 }
