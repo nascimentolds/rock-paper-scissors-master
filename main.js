@@ -33,12 +33,11 @@ options.forEach(option => {
     housePicked(housePick);
 
     var winner = win(option.id, housePick);
-    winMessageDisplay(winner);    
-    
-
+        
     setTimeout(() => {
       winBox.style.display = 'flex';
       score.innerHTML = winPlayer + winHouse;
+      winMessageDisplay(winner);
     }, 1000); 
   });
 })
@@ -60,8 +59,10 @@ function win(p1, p2) {
 function winMessageDisplay(win) {
   if (win == "winner") {
     winMessage.innerHTML = "YOU WIN";
+    playerChosse.classList.add("winner");
   } else if (win == "loser") {
     winMessage.innerHTML = "YOU LOSE";
+    houseChosse.classList.add("winner");
   } else {
     winMessage.innerHTML = "DRAW";
   }
@@ -106,4 +107,6 @@ winBtn.addEventListener('click', () => {
   opcoes.style.display = 'block';
   houseChosse.innerHTML = '<div class="hide-choose"></div>';
   winBox.style.display = 'none';
+  playerChosse.classList.remove('winner');
+  houseChosse.classList.remove('winner');
 })

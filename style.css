@@ -183,7 +183,7 @@ a:hover .img-rock {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  min-width: 375px;
   margin-top: 50px;
   margin-bottom: 50px;
   bottom: 0;
@@ -319,8 +319,7 @@ a:hover .img-rock {
 }
 
 .win-bt:hover {
-  background: hsl(349, 0%, 83%);
-  border: 1px solid var(--scoreText);
+  color: hsl(349, 71%, 52%);
 }
 
 .player-choose {
@@ -330,12 +329,9 @@ a:hover .img-rock {
   animation-name: slidein;
 }
 
-/* .house-choose {
-  width: 130px;
-  aspect-ratio: 1;
-  animation-duration: 1s;
-  animation-name: slidein;
-} */
+.show-house {
+  transition: 0.5s;
+}
 
 @keyframes slidein {
   from {
@@ -346,3 +342,14 @@ a:hover .img-rock {
     width: 100%;
   }
 }
+
+.winner {
+  width: 130px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px #56507018, 0 0 0 50px #56507018,
+      0 0 0 80px #56507018;
+  transition: 0.3s;
+}
+
+/* Responsive design */
