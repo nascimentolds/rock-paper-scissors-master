@@ -294,8 +294,8 @@ a:hover .img-rock {
 .game-header {
   display: grid;
   grid-template-areas:
-   "player house"
-   "win win";
+    "player house"
+    "win win";
 }
 
 .player {
@@ -340,22 +340,24 @@ a:hover .img-rock {
 }
 
 .player-choose {
-  width: 80px;
+  width: 130px;
   animation-duration: 1s;
   animation-name: slidein;
+  position: relative;
 }
 
-.show-house {
-  transition: 0.5s;
+.house-choose {
+  width: 130px;
 }
 
 @keyframes slidein {
-  from {
-    width: 100px;
+  0% {
+    left: 10%;
+    right: 0%;
   }
-
-  to {
-    width: 50%;
+  100% {
+    left: 0%;
+    right: 100%;
   }
 }
 
@@ -389,18 +391,18 @@ a:hover .img-rock {
   .title {
     width: 150px;
   }
-  
+
   .score-box {
     width: 20vh;
     height: 15vh;
   }
-  
+
   .score-title {
     color: var(--scoreText);
     font-size: 10pt;
     letter-spacing: 1px;
   }
-  
+
   .score {
     color: var(--darkText);
     font-size: 32pt;
@@ -413,28 +415,28 @@ a:hover .img-rock {
     margin-top: 20px;
     border: 1px solid transparent;
   }
-  
+
   .opcoes-header {
     padding-inline: 15px;
     margin-bottom: 20px;
     margin-top: 10px;
   }
-  
+
   .opcoes-footer {
     margin-top: 20px;
   }
-  
+
   .img-paper,
   .img-scissors,
   .img-rock {
     width: 55px;
   }
-  
+
   .button {
     padding: 10px;
     width: 120px;
   }
-  
+
   .border {
     width: 150px;
   }
@@ -445,7 +447,42 @@ a:hover .img-rock {
     width: 100%;
     margin-right: 50px;
   }
-  
+
+  /* GAME */
+
+  .game {
+    display: none;
+    margin-top: 0;
+  }
+
+  .box-choose {
+    display: grid;
+    grid-template-areas:
+      "pick"
+      "choose";
+    gap: 10px;
+  }
+
+  .game-header {
+    display: grid;
+    gap: 5em;
+    grid-template-areas: "player win house";
+  }
+
+  .choose {
+    grid-area: choose;
+  }
+
+  .pick {
+    position: static;
+    grid-area: pick;
+  }
+
+  .winner {
+    width: 150px;
+    box-shadow: 0 0 0 50px #56507018, 0 0 0 90px #56507018, 0 0 0 120px #56507018;
+  }
+
   /* RULES MODAL */
   .rules {
     background: var(--darkText);
@@ -473,7 +510,7 @@ a:hover .img-rock {
     display: flex;
     justify-content: start;
   }
-  
+
   .rules-footer {
     display: flex;
     justify-content: end;
