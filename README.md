@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot-large.jpg)
-![](./screenshot-small.jpg)
+![](./screenshot-large.png)
+![](./screenshot-small.png)
 
 ### Links
 
