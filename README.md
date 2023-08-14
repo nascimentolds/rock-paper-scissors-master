@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My solution on Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [My solution on Frontend Mentor](https://www.frontendmentor.io/solutions/rock-paper-scissors-solution-lYXOdS9TSC)
 - Live Site URL: [See my solution running](https://rock-paper-scissors-master-cqtkbiobt-nascimentolds.vercel.app/)
 
 ## My process
